@@ -1,5 +1,4 @@
-﻿
-/* ==========================
+﻿/* ==========================
    1. VARIÁVEIS E RESET
 ========================== */
 
@@ -264,12 +263,12 @@ main {
 
 
 /* ==========================
-   6. CARTÕES DE PROJETOS
+   6. CARTÕES DE PROJETOS E CARROSSEL
 ========================== */
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 20px;
     align-items: stretch;
 }
@@ -278,6 +277,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    
+    flex: 0 0 100%; 
 
     min-width: 0;
     padding: 26px;
@@ -348,6 +349,45 @@ main {
     font-size: 1.1rem;
 }
 
+.carousel {
+  position: relative;
+  width: 1000px;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
 
 /* ==========================
    7. CONTATO E ÍCONES
@@ -393,7 +433,6 @@ main {
     flex-shrink: 0;
     object-fit: contain;
 
-    /* Aplica a cor azul aos PNGs monocromáticos pretos */
     filter: invert(72%) sepia(65%) saturate(700%)
         hue-rotate(165deg) brightness(100%);
 }
@@ -433,10 +472,6 @@ main {
 ========================== */
 
 @media (max-width: 900px) {
-    .projects-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     .contact-list {
         grid-template-columns: 1fr;
     }
@@ -475,10 +510,6 @@ main {
         padding: 52px 0;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
     .project-card {
         padding: 22px;
     }
@@ -509,4 +540,106 @@ main {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
     }
+}
+
+/* ==========================
+   11. EFEITO DE IMAGEM E MODAL (TELA CHEIA)
+========================== */
+
+/* Contêiner da imagem no cartão */
+.image-container {
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* Ícone e fundo transparente que surgem no hover */
+.expand-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 17, 32, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.expand-icon svg {
+    width: 48px;
+    height: 48px;
+    color: var(--primary);
+    transform: scale(0.5);
+    transition: transform 0.3s ease;
+}
+
+/* Animações ao passar o mouse */
+.image-container:hover .expand-icon {
+    opacity: 1;
+}
+
+.image-container:hover .expand-icon svg {
+    transform: scale(1);
+}
+
+.image-container:hover img {
+    transform: scale(1.05); 
+}
+
+/* Estilo da janela de Tela Cheia (Modal) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f5f9;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-modal:hover {
+    color: var(--primary);
 }

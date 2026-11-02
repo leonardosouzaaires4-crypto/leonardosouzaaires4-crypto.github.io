@@ -1,18 +1,18 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="description"
-        content="Portfólio de Leonardo, estudante de Análise e Desenvolvimento de Sistemas, com projetos de desenvolvimento web e Python."
-    >
+    <meta name="description"
+        content="Portfólio de Leonardo, estudante de Análise e Desenvolvimento de Sistemas, com projetos de desenvolvimento web e Python.">
 
     <title>Leonardo | Portfólio de Desenvolvedor</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -92,83 +92,118 @@
             </div>
 
             <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-number">PROJETO 01</div>
+                <div class="carousel">
+                    <div class="carousel-images" id="carouselImages">
 
-                    <h3>Cívika</h3>
+                        <article class="project-card">
+                            <div class="project-number">PROJETO 01</div>
 
-                    <p>
-                        Plataforma web com o objetivo de facilitar
-                        o acesso a informações sobre o Brasil.
-                    </p>
+                            <h3>Cívika</h3>
 
-                    <ul class="project-tags">
-                        <li>Desenvolvimento web</li>
-                        <li>Projeto colaborativo</li>
-                    </ul>
+                            <p>
+                                Plataforma web com o objetivo de facilitar
+                                o acesso a informações sobre o Brasil.
+                            </p>
 
-                    <a
-                        href="https://civikabr.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link"
-                    >
-                        Visitar projeto
-                        <span aria-hidden="true">↗</span>
-                    </a>
-                </article>
+                            <ul class="project-tags">
+                                <li>Desenvolvimento web</li>
+                                <li>Projeto colaborativo</li>
+                            </ul>
 
-                <article class="project-card">
-                    <div class="project-number">PROJETO 02</div>
+                            <!-- Faça isso nos 3 projetos, trocando apenas o src e o alt da imagem -->
+                            <div class="image-container">
+                                <img src="img/civika.png" alt="Civíka - Plataforma web com informações sobre o Brasil">
+                                <div class="expand-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <a href="https://civikabr.com/" target="_blank" rel="noopener noreferrer"
+                                class="project-link">
+                                Visitar projeto
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </article>
 
-                    <h3>Calculadora em Python</h3>
+                        <article class="project-card">
+                            <div class="project-number">PROJETO 02</div>
 
-                    <p>
-                        Aplicação de terminal que realiza as quatro
-                        operações matemáticas básicas.
-                    </p>
+                            <h3>Calculadora em Python</h3>
 
-                    <ul class="project-tags">
-                        <li>Python</li>
-                        <li>Lógica de programação</li>
-                    </ul>
+                            <p>
+                                Aplicação de terminal que realiza as quatro
+                                operações matemáticas básicas.
+                            </p>
 
-                    <a
-                        href="https://github.com/leonardosouzaaires4-crypto/python_fundamentos/tree/main/calculadora"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link"
-                    >
-                        Ver código no GitHub
-                        <span aria-hidden="true">↗</span>
-                    </a>
-                </article>
+                            <ul class="project-tags">
+                                <li>Python</li>
+                                <li>Lógica de programação</li>
+                            </ul>
 
-                <article class="project-card">
-                    <div class="project-number">PROJETO 03</div>
+                            <!-- Faça isso nos 3 projetos, trocando apenas o src e o alt da imagem -->
+                            <div class="image-container">
+                                <img src="img/calculadora.png" alt="Calculadora em Python">
+                                <div class="expand-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
 
-                    <h3>Jogo de adivinhação</h3>
+                            <a href="https://github.com/leonardosouzaaires4-crypto/python_fundamentos/tree/main/calculadora"
+                                target="_blank" rel="noopener noreferrer" class="project-link">
+                                Ver código no GitHub
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </article>
 
-                    <p>
-                        Jogo em que o usuário tenta descobrir um número
-                        secreto sorteado entre 1 e 100.
-                    </p>
+                        <article class="project-card">
+                            <div class="project-number">PROJETO 03</div>
 
-                    <ul class="project-tags">
-                        <li>Python</li>
-                        <li>Estruturas de repetição</li>
-                    </ul>
+                            <h3>Jogo de adivinhação</h3>
 
-                    <a
-                        href="https://github.com/leonardosouzaaires4-crypto/python_fundamentos/tree/main/adivinhe%20o%20n%C3%BAmero"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="project-link"
-                    >
-                        Ver código no GitHub
-                        <span aria-hidden="true">↗</span>
-                    </a>
-                </article>
+                            <p>
+                                Jogo em que o usuário tenta descobrir um número
+                                secreto sorteado entre 1 e 100.
+                            </p>
+
+                            <ul class="project-tags">
+                                <li>Python</li>
+                                <li>Estruturas de repetição</li>
+                            </ul>
+
+                            <!-- Faça isso nos 3 projetos, trocando apenas o src e o alt da imagem -->
+                            <div class="image-container">
+                                <img src="img/adivinhacao.png" alt="Jogo de adivinhação em Python">
+                                <div class="expand-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+
+
+                            <a href="https://github.com/leonardosouzaaires4-crypto/python_fundamentos/tree/main/adivinhe%20o%20n%C3%BAmero"
+                                target="_blank" rel="noopener noreferrer" class="project-link">
+                                Ver código no GitHub
+                                <span aria-hidden="true">↗</span>
+                            </a>
+                        </article>
+
+                    </div>
+                    <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+                    <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+                </div>
             </div>
         </section>
 
@@ -184,15 +219,8 @@
 
             <ul class="contact-list">
                 <li>
-                    <a
-                        href="mailto:leonardosouzaaires4@gmail.com"
-                        class="contact-link"
-                    >
-                        <img
-                            src="img/email_logo.png"
-                            alt=""
-                            class="social-icon"
-                        >
+                    <a href="mailto:leonardosouzaaires4@gmail.com" class="contact-link">
+                        <img src="img/email_logo.png" alt="" class="social-icon">
                         <span>
                             <strong>E-mail</strong>
                             <span class="contact-detail">
@@ -203,17 +231,9 @@
                 </li>
 
                 <li>
-                    <a
-                        href="https://github.com/leonardosouzaaires4-crypto"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="contact-link"
-                    >
-                        <img
-                            src="img/github_logo.png"
-                            alt=""
-                            class="social-icon"
-                        >
+                    <a href="https://github.com/leonardosouzaaires4-crypto" target="_blank" rel="noopener noreferrer"
+                        class="contact-link">
+                        <img src="img/github_logo.png" alt="" class="social-icon">
                         <span>
                             <strong>GitHub</strong>
                             <span class="contact-detail">
@@ -224,17 +244,9 @@
                 </li>
 
                 <li>
-                    <a
-                        href="https://www.linkedin.com/in/leonardo-souza-aires-493616389"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="contact-link"
-                    >
-                        <img
-                            src="img/linkedin_logo.png"
-                            alt=""
-                            class="social-icon"
-                        >
+                    <a href="https://www.linkedin.com/in/leonardo-souza-aires-493616389" target="_blank"
+                        rel="noopener noreferrer" class="contact-link">
+                        <img src="img/linkedin_logo.png" alt="" class="social-icon">
                         <span>
                             <strong>LinkedIn</strong>
                             <span class="contact-detail">
@@ -249,8 +261,16 @@
 
     <footer class="footer">
         <p>
-            © 2026 Leonardo. Desenvolvido com HTML e CSS.
+            © 2026 Leonardo. Desenvolvido com HTML, CSS e JavaScript.
         </p>
     </footer>
+    <!-- Estrutura do Modal de Imagem -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="expandedImg">
+    </div>
 </body>
+</html>
+</body>
+
 </html>
