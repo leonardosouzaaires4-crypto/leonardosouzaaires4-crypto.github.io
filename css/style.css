@@ -351,8 +351,8 @@ main {
 
 .carousel {
   position: relative;
-  width: 1000px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1000px;
   overflow: hidden;
   border-radius: 8px;
   margin: auto;
